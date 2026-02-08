@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+html, body {
+    height: 100%;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: cadetblue;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    height: 15%;
+    gap: 10px;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+.kembali{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    height: 100%;
+    width: 20%;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+.kembali :hover{
+    border-radius: 20px;
+    background-color: #ccc;
+}
+
+#judultabel{
+    background-color: white;
+    align-items: center;
+    display: flex;
+    padding-left: 30px;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.konten {
+    width: 100%;
+    height: 100%;
+    padding: 25px 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.kontenTabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: white;
+    color: gray;
+}
+
+#logo{
+    width: 100px;
+    opacity: 50%;
+    margin-bottom: 20px;
+}
+
+
+.kontenTabel table {
+    border-collapse: collapse;   /* ⬅️ garis rapi */
+    table-layout: fixed;         /* ⬅️ kolom bagi rata */
+}
+
+.kontenTabel th,
+.kontenTabel td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word;       /* ⬅️ teks panjang turun */
+}
+
+.kontenTabel th {
+    background-color: #f3f3f3;
+    font-weight: bold;
+}
+select{
+    width: 100%;
+    height: 30px;
+}
+
+td>button{
+    background-color: red;
+    border: 0px solid;
+    padding: 5px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px gray;
+    color: white;
+}
+
+td>button:hover{
+    background-color: rgb(179, 0, 0);
+}
+
+.horizontal{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    height: 100%;
+}
+.judul{
+    margin-bottom: 20px;
+}

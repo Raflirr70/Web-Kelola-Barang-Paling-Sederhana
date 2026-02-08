@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+.container{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: cadetblue;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainMenu{
+    border-radius: 5%;
+    width: 45%;
+    height: 90vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.konten{
+    width: auto;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rebeccapurple; */
+}
+
+#logo{
+    height: 200px;
+    width: auto;
+}
+#judul{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 30px;
+}
+.buttomLinkMenu{
+    display: block;  
+    margin-top: 15px;
+    padding: 20px 0;         /* pakai px / rem lebih stabil */
+    width: 70vh;    
+    color: white;
+    text-align: center;
+    background-color: rgb(42, 116, 150);
+    border-radius: 10px;
+    text-decoration: none; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
+.buttomLinkMenu:hover{
+    background-color: rgb(28, 87, 114);
+}

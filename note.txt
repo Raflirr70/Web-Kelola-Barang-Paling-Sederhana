@@ -1,0 +1,21 @@
+tabel barang
+ id_barang
+ kode_barang
+ name
+ status
+
+tabel kategori
+ id_kategori
+ name
+ tanggal_update
+ 
+tabel barangmasuk
+ id_barangmasuk
+ id_barang
+ tanggal_masuk
+
+tabel barangkeluar
+ id_barangkeluar
+ id_barang
+ deskripsi
+ tanggal_keluar

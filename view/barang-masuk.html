@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/barang-masuk.css">
+    <title>Barang Masuk | praktikum</title>
+</head>
+<body>
+    <div class="container">
+        <div class="kontenHorizontal">
+            <div class="konten1">
+                <div class="kembali">
+                    <a href="index.html">&lt; Kembali</a>
+                </div>
+                <div class="kontenform">
+                    <h3 id="judulform">Form Barang Masuk</h3>
+                    <img id="logo" src="../asset/Logo barang masuk.webp" alt="">
+                    <form action="" method="post">
+                        <table>
+                        <tr>
+                            <td><label for="kategori">Kategori</label></td>
+                            <td style="padding: 0 10px;">:</td>
+                            <td>
+                                <select name="kategori" id="kategori">
+                                    <option value="">-- Pilih Kategori --</option>
+                                    <option value="1">Processor (cpu)</option>
+                                    <option value="2">VGA (vga)</option>
+                                    <option value="3">RAM (ram)</option>
+                                    <option value="4">Monitor (mtr)</option>
+                                    <option value="5">Keyboard (kyb)</option>
+                                    <option value="6">Mouse (mos)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="kodebarang">kodebarang</label></td>
+                            <td style="padding: 0 10px;">:</td>
+                            <td><input type="text" name="kodebarang" id="kodebarang" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><label for="namabarang">Nama Barang</label></td>
+                            <td style="padding: 0 10px;">:</td>
+                            <td><input type="text" name="kodebarang" id="kodebarang"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="statusbarang">Status barang</label></td>
+                            <td style="padding: 0 10px;">:</td>
+                            <td><input type="text" name="statusbarang" id="kodebarang"></td>
+                        </tr>
+                        </table>
+                        <button id="submit" type="submit">Tambah</button>
+                    </form>
+                </div>
+            </div>
+            <div class="konten2">
+                <div class="kontenTabel">
+                    <h3 id="judultabel">DAFTAR BARANG</h3>
+                    <table>
+                        <tr>
+                            <th style="width: 20px;">No</th>
+                            <th style="width: 200px;">Kode Barang</th>
+                            <th style="width: 200px;">Nama Barang</th>
+                            <th style="width: 150px;">Kategori</th>
+                            <th style="width: 50px;">Status</th>
+                            <th style="width: 200px;">tanggal</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>ms0001</td>
+                            <td>B100</td>
+                            <td>Mouse</td>
+                            <td>baik</td>
+                            <td>2-10-2025</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
