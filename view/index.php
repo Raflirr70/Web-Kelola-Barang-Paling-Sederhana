@@ -12,9 +12,9 @@
             <div class="konten">
                 <img id="logo" src="../asset/logo.webp" alt="">
                 <h1 id="judul">Aplikasi Kelola Barang</h1>
-                <a class="buttomLinkMenu" href="barang-masuk.html">Barang Masuk</a>
-                <a class="buttomLinkMenu" href="barang-keluar.html">Barang keluar</a>
-                <a class="buttomLinkMenu" href="histrori.html">Lihat Histori</a>
+                <a class="buttomLinkMenu" href="barang-masuk.php">Barang Masuk</a>
+                <a class="buttomLinkMenu" href="barang-keluar.php">Barang keluar</a>
+                <a class="buttomLinkMenu" href="histrori.php">Lihat Histori</a>
             </div>
         </div>
     </div>

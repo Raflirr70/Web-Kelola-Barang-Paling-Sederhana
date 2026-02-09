@@ -10,7 +10,7 @@
     <div class="container">
         <div class="konten">
             <div class="header">
-                <a class="kembali" href="index.html">&lt; Kembali</a>
+                <a class="kembali" href="index.php">&lt; Kembali</a>
                 <h1 id="judultabel">HISTORI BARANG MASUK KELUAR</h1>
             </div>
             <div class="horizontal">
@@ -27,11 +27,35 @@
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td>ms0001</td>
+                            <td>ms-0001</td>
                             <td>B100</td>
                             <td>Mouse</td>
                             <td>baik</td>
+                            <td>5-10-2025</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>cpu-0002</td>
+                            <td>intel core I3 gen2</td>
+                            <td>Processor</td>
+                            <td>baik</td>
                             <td>2-10-2025</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>cpu-0003</td>
+                            <td>intel core I3 gen6</td>
+                            <td>Processor</td>
+                            <td>baik</td>
+                            <td>4-9-2025</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>vga-0001</td>
+                            <td>RTX 3060 TI</td>
+                            <td>VGA</td>
+                            <td>baik</td>
+                            <td>16-8-2025</td>
                         </tr>
                     </table>
                 </div>
@@ -52,7 +76,7 @@
                             <td>B100</td>
                             <td>Mouse</td>
                             <td>baik</td>
-                            <td>2-10-2025</td>
+                            <td>17-2-2026</td>
                         </tr>
                     </table>
                 </div>
