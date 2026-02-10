@@ -22,18 +22,28 @@ class BarangMasuk
             $stmt->bind_param("ssis", $kode_barang, $name, $kategori, $status);
             
             $stmt->execute();
-            // $stmt->bind_param("ssis", $kode_barang, $name, $id_kategori, $status);
-            // $id_barang = $this->conn->insert_id;
-
-            // Insert barang masuk
-            // $stmt = $this->conn->prepare(
-            //     "INSERT INTO barang_masuk (id_barang, tanggal_masuk) VALUES (?, NOW())"
-            // );
-            // $stmt->bind_param("i", $id_barang);
-            // $stmt->execute();
 
             $this->conn->commit();
             return true;
+
+        } catch (Exception $e) {
+            echo "Error: " . $this->conn->error;
+            $this->conn->rollback();
+            return false;
+        }
+    }
+    public function view()
+    {
+        try {
+            $this->conn->begin_transaction();
+            
+            $stmt = $this->conn->prepare(
+                "SELECT * FROM barang WHERE status_barang != 'keluar'"
+            );
+            
+            $stmt->execute();
+
+            return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 
         } catch (Exception $e) {
             echo "Error: " . $this->conn->error;

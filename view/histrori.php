@@ -1,3 +1,7 @@
+<?php
+    require_once "../controller/histori.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,38 +29,23 @@
                             <th style="width: 100px;">Status</th>
                             <th style="width: 200px;">tanggal</th>
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>ms-0001</td>
-                            <td>B100</td>
-                            <td>Mouse</td>
-                            <td>baik</td>
-                            <td>5-10-2025</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>cpu-0002</td>
-                            <td>intel core I3 gen2</td>
-                            <td>Processor</td>
-                            <td>baik</td>
-                            <td>2-10-2025</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>cpu-0003</td>
-                            <td>intel core I3 gen6</td>
-                            <td>Processor</td>
-                            <td>baik</td>
-                            <td>4-9-2025</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>vga-0001</td>
-                            <td>RTX 3060 TI</td>
-                            <td>VGA</td>
-                            <td>baik</td>
-                            <td>16-8-2025</td>
-                        </tr>
+                        <?php
+                            $masuk = new HistoriController;
+                            $datas = $masuk->getBarangMasuk();
+                            $i = 1;
+                            foreach($datas as $data){
+                        ?>
+                            <tr>
+                                <td><?php echo $i; ?></td>
+                                <td><?php echo $data["kode_barang"]; ?></td>
+                                <td><?php echo $data["nama"]; ?></td>
+                                <td><?php echo $data["id_kategori"]; ?></td>
+                                <td><?php echo $data["status_barang"]; ?></td>
+                                <td><?php echo $data["tanggal_masuk"]; ?></td>
+                            </tr>
+                        <?php
+                            }
+                        ?>
                     </table>
                 </div>
                 <div class="kontenTabel">
