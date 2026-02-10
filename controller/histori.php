@@ -9,16 +9,15 @@ class HistoriController
 
     public function __construct()
     {
-        global $conn;
-        $this->conn = $conn;
+        $db = new Database();
+        $this->conn = $db->connect();
     }
 
-    // ambil histori barang masuk
-    public function getBarangMasuk()
+    public function ViewBarangMasuk($status = "")
     {
         try {
-            $barang = new BarangMasuk;
-            return $barang->view();
+            $barang = new BarangMasukController;
+            return $barang->view($status);
         } catch (Exception $e) {
             echo "Error: " . $this->conn->error;
             $this->conn->rollback();

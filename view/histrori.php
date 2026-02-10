@@ -31,7 +31,7 @@
                         </tr>
                         <?php
                             $masuk = new HistoriController;
-                            $datas = $masuk->getBarangMasuk();
+                            $datas = $masuk->ViewBarangMasuk();
                             $i = 1;
                             foreach($datas as $data){
                         ?>
@@ -57,16 +57,26 @@
                             <th style="width: 200px;">Nama Barang</th>
                             <th style="width: 150px;">Kategori</th>
                             <th style="width: 100px;">Status</th>
-                            <th style="width: 200px;">tanggal</th>
+                            <th style="width: 200px;">tanggal masuk</th>
+                            <th style="width: 200px;">tanggal keluar</th>
                         </tr>
+                        <?php
+                            $datasOut = $masuk->ViewBarangMasuk("keluar");
+                            $i = 1;
+                            foreach($datasOut as $data){
+                        ?>
                         <tr>
-                            <td>1</td>
-                            <td>ms0001</td>
-                            <td>B100</td>
-                            <td>Mouse</td>
-                            <td>baik</td>
-                            <td>17-2-2026</td>
+                            <td><?php echo $i ?></td>
+                            <td><?php echo $data["kode_barang"] ?></td>
+                            <td><?php echo $data["nama"] ?></td>
+                            <td><?php echo $data["id_kategori"] ?></td>
+                            <td><?php echo $data["status_barang"] ?></td>
+                            <td><?php echo $data["tanggal_masuk"] ?></td>
+                            <td><?php echo $data["tanggal_masuk"] ?></td>
                         </tr>
+                        <?php
+                        }
+                        ?>
                     </table>
                 </div>
             </div>

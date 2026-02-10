@@ -1,7 +1,7 @@
 <?php
 require_once "db.php";
 
-class BarangMasuk
+class BarangMasukController
 {
     private $conn;
 
@@ -20,9 +20,8 @@ class BarangMasuk
                 "INSERT INTO barang (kode_barang, nama, id_kategori, status_barang) VALUES (?,?,?,?);"
             );
             $stmt->bind_param("ssis", $kode_barang, $name, $kategori, $status);
-            
             $stmt->execute();
-
+            
             $this->conn->commit();
             return true;
 
@@ -32,15 +31,20 @@ class BarangMasuk
             return false;
         }
     }
-    public function view()
+    public function view($status = "")
     {
         try {
-            $this->conn->begin_transaction();
-            
+            $query = "SELECT * FROM barang";
+            if($status != ""){
+                $query .= " WHERE status_barang = ?";
+            }
             $stmt = $this->conn->prepare(
-                "SELECT * FROM barang WHERE status_barang != 'keluar'"
+                $query
             );
-            
+            if($status != ""){
+                $stmt->bind_param("s", $status);
+            }
+                
             $stmt->execute();
 
             return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);

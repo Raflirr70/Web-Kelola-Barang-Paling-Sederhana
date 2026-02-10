@@ -1,7 +1,7 @@
 <?php
     require_once "../controller/barang-masuk.php";
     
-    $barang = new BarangMasuk();
+    $barang = new BarangMasukController();
 
     if (isset($_POST['submit'])) {
 
